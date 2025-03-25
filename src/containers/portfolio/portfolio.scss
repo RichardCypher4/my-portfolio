@@ -1,136 +1,144 @@
 .portfolio {
-  padding: 50px 0;
+  padding: 40px;
   background-color: var(--background-color);
+
+  /* Optional heading style */
+  h1,
+  h2 {
+    text-align: center;
+    color: var(--yellow-theme-main-color);
+    margin-bottom: 30px;
+  }
 }
 
+/* Container for all items */
 .portfolio-content {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align to the left */
+  flex-wrap: wrap;
   gap: 30px;
+  justify-content: center; /* center the cards */
 }
 
+/* Individual project card */
 .portfolio-item {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  gap: 20px;
+  width: 320px;
+  background-color: #222; /* Card background */
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 
-  .image-container {
-    flex: 0 0 400px; /* Fixed width for images */
-  }
-
-  /* Image preview (No scrolling) */
-  .project-preview {
+  /* Screenshot container */
+  .screenshot-container {
     width: 100%;
-    height: 250px;
-    border: none;
-    border-radius: 10px;
-    pointer-events: none; /* Prevent scrolling inside iframe */
-  }
-
-  /* Project Info Section */
-  .project-info {
-    flex: 1;
-    padding: 20px;
-    background-color: var(--background-color);
-    color: white;
-    border-radius: 8px;
-    text-align: left;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-    color: white;
-  }
-
-  p {
-    font-size: 1rem;
-    color: #ccc;
-  }
-
-  /* Tech Stack */
-  .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
-  }
-
-  .tech {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: var(--background-color);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: white;
-  }
-
-  .tech-icon {
-    font-size: 1.2rem;
-    color: #007bff;
-  }
-}
-
-/* ✅ Responsive Adjustments */
-@media (max-width: 1024px) {
-  .portfolio-item {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .image-container {
-    width: 100%;
-  }
-
-  .project-preview {
-    height: 200px;
-  }
-
-  .project-info {
-    width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-  .portfolio-content {
-    align-items: center;
-    
-  }
-
-  .portfolio-item {
-    flex-direction: column;
-    align-items: center;
-    
-  }
-
-  .image-container {
-    width: 100%;
-
-  }
-
-  .project-preview {
     height: 180px;
+    overflow: hidden;
+
+    .screenshot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
-  .project-info {
-    text-align: center;
-    margin-top: -130px;
+  /* Info section below the screenshot */
+  .info {
+    padding: 15px;
+
+    h3 {
+      margin-bottom: 5px;
+      font-size: 1.3rem;
+      color: var(--yellow-theme-main-color);
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    /* Tech stack badges */
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 10px;
+
+      .tech {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        background-color: #333;
+        padding: 4px 8px;
+        border-radius: 5px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #fff;
+
+        .tech-icon {
+          font-size: 1.1rem;
+          color: #007bff;
+        }
+      }
+    }
+
+    /* "View Demo" button */
+    .demo-button {
+      display: inline-block;
+      background: var(--yellow-theme-main-color);
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: #fdbb2d; /* Slightly different hover color */
+      }
+    }
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 20px;
   }
 
-  h3 {
-    font-size: 1.3rem;
+  .portfolio-item {
+    width: 90%;
   }
 
-  p {
-    font-size: 0.9rem;
+  .screenshot-container {
+    height: 160px;
   }
 
-  .tech {
-    font-size: 0.85rem;
+  .info {
+    h3 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      font-size: 0.85rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-item {
+    width: 95%;
+  }
+
+  .screenshot-container {
+    height: 140px;
+  }
+
+  .info {
+    p {
+      font-size: 0.8rem;
+    }
   }
 }
