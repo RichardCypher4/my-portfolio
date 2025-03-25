@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import './home.scss';
 import { Animate } from 'react-simple-animate';
 import Mine from '../../asset/niii/mine.jpg';
-import MyResume from '../../asset/niii/Oladayo richard.pdf';
+import MyResume from '../../asset/niii/Oladayorichard.pdf';
 
 const Home = () => {
   // Debug to check for duplicate mounts
