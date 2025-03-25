@@ -30,7 +30,7 @@ const Home = () => {
         <div className="home__text-wrapper">
           <h1>
             Hi, I'm Cypher<br />
-            Full Stack Engineer
+            Front-end Engineer
           </h1>
         </div>
 

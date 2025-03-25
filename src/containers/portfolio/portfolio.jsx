@@ -6,8 +6,8 @@ import "./portfolio.scss";
 
 // Replace these image paths with your actual screenshot file paths
 import FoodRestaurantImg from "../../asset/niii/image1.jpg";
-import CypherEcommerceImg from "../../asset/niii/image2.jpg";
-import TicTacToeImg from "../../asset/niii/image3.jpg";
+import CypherEcommerceImg from "../../asset/niii/image3.jpg";
+import TicTacToeImg from "../../asset/niii/image2.jpg";
 
 const projects = [
   {
