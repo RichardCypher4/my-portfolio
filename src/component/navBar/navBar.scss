@@ -1,0 +1,84 @@
+.navbar {
+  background-color: black; // Add your preferred background color
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  .navbar_container {
+    display: flex;
+    justify-content: flex-start; // Align items to the left
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .navbar_container_logo {
+      color: var(--yellow-theme-main-color); // Add your preferred logo color
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      margin-right: auto; // Push logo to the left
+    }
+
+    .navbar_links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 2rem;
+      margin-left: 2rem; // Add space between logo and links
+
+      &.active {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        right: 10%;
+        width: 100%;
+        height: 40vh;
+        background-color: black; // Match navbar background
+      
+      }
+
+      .navbar_container_menu_item {
+        .nav_container_menu_items_links {
+          color: white; // Add your preferred link color
+          text-decoration: none;
+          font-size: 1.2rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: var(--yellow-theme-sub-text-color); // Add hover color
+          }
+        }
+      }
+    }
+
+    .nav-icon {
+      display: none;
+      color: var(--yellow-theme-main-color); // Add your preferred icon color
+      cursor: pointer;
+      margin-left: auto; // Push toggle icon to the right
+
+      @media only screen and (max-width: 768px) {
+        display: block;
+      }
+    }
+
+    @media only screen and (max-width: 768px) {
+      .navbar_links {
+        display: none;
+
+        &.active {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start; // Align links to the left
+          padding-left: 2rem; // Add padding for better alignment
+        }
+      }
+
+      .navbar_container_logo {
+        margin-right: 0; // Reset margin for mobile
+      }
+    }
+  }
+}

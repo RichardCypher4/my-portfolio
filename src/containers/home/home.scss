@@ -1,0 +1,117 @@
+.home {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: var(--background-color); 
+}
+
+/* Profile Image Wrapper */
+.home__image-wrapper {
+  width: 150px;  
+  height: 150px;  
+  overflow: hidden;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto; // Centers the image for all screen sizes
+}
+
+.home__image {
+  width: 100%;  
+  height: 100%; 
+  object-fit: cover;
+}
+
+/* Text Section */
+.home__text-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+  width: 100%;
+  text-align: center;
+}
+
+.home__text-wrapper h1 {
+  color: var(--yellow-theme-main-color);
+  margin: 0;
+  font-size: 6rem;
+  line-height: 1.2;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typingEffectAnimation 2.5s steps(30, end);
+}
+
+/* Hire Me Button */
+.home__contact-me {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 40px;
+  font-size: 1.5rem;
+  background: transparent;
+  color: var(--yellow-theme-main-color);
+  border: 1.5px solid var(--yellow-theme-main-color);
+  border-radius: 4px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: var(--yellow-theme-main-color);
+    color: #000000;
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .home__text-wrapper h1 {
+    font-size: 4.5rem;
+    line-height: 6rem;
+  }
+
+  .home__image-wrapper {
+    width: 120px;  
+    height: 120px;  
+  }
+
+  button {
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .home__text-wrapper h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .home__image-wrapper {
+    width: 100px;  
+    height: 100px;
+  }
+
+  button {
+    font-size: 1.2rem;
+    padding: 8px 30px;
+  }
+}
+
+@keyframes typingEffectAnimation {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

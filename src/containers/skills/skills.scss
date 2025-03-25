@@ -1,0 +1,46 @@
+
+.section__div{
+    width: 30%;
+}
+.cat{
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    position: relative;
+    left: -170px;
+    
+    
+    
+}
+  
+  @media (max-width: 600px) {
+    .section__div {
+      width: 90%; 
+      margin-bottom: 15px;
+      position: relative;
+    
+    }
+  
+    .cat {
+      margin-right: 0;   
+      font-size: 16px;  
+      margin-bottom: 20px;
+      margin-right: 70px;
+    }
+  }
+  @media only screen and (min-width: 769px)  {
+    .cat{
+      font-size: 18px;
+      position: relative; 
+      
+    }
+ }
+
+ @media only screen and (max-width: 769px)  {
+    .cat{
+        font-size: 17px;
+        position: relative;
+        left: -50px;
+    }
+}
+ 
