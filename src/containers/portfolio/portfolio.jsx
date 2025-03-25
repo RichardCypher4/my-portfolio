@@ -5,9 +5,9 @@ import { FaReact, FaSass, FaFire, FaBolt, FaShoppingCart } from "react-icons/fa"
 import "./portfolio.scss";
 
 // Replace these image paths with your actual screenshot file paths
-import FoodRestaurantImg from "../../asset/niii/WhatsApp Image1.jpg";
-import CypherEcommerceImg from "../../asset/niii/WhatsApp Image 2.jpg";
-import TicTacToeImg from "../../asset/niii/WhatsApp Image 3.jpg";
+import FoodRestaurantImg from "../../asset/niii/image1.jpg";
+import CypherEcommerceImg from "../../asset/niii/image2.jpg";
+import TicTacToeImg from "../../asset/niii/image3.jpg";
 
 const projects = [
   {
