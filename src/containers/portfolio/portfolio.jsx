@@ -4,13 +4,19 @@ import { BsInfoCircle } from "react-icons/bs";
 import { FaReact, FaSass, FaFire, FaBolt, FaShoppingCart } from "react-icons/fa";
 import "./portfolio.scss";
 
+// Replace these image paths with your actual screenshot file paths
+import FoodRestaurantImg from "../../asset/niii/WhatsApp Image1.jpg";
+import CypherEcommerceImg from "../../asset/niii/WhatsApp Image 2.jpg";
+import TicTacToeImg from "../../asset/niii/WhatsApp Image 3.jpg";
+
 const projects = [
   {
     id: 1,
     title: "FoodRestaurant",
     link: "https://foodiekitchen.netlify.app/",
-    embedUrl: "https://foodiekitchen.netlify.app/",
-    description: "A modern food delivery platform providing users an easy way to reach out for inquiries, support, or business communication.",
+    description:
+      "A modern food delivery platform providing users an easy way to reach out for inquiries, support, or business communication.",
+    image: FoodRestaurantImg, // Local screenshot file
     stack: [
       { name: "React", icon: <FaReact className="tech-icon" /> },
       { name: "SCSS", icon: <FaSass className="tech-icon" /> },
@@ -21,22 +27,25 @@ const projects = [
   {
     id: 2,
     title: "Cypher E-commerce",
-    link: "https://cypher-ecomerce.netlify.app",
-    embedUrl: "https://cypher-ecomerce.netlify.app",
-    description: "An e-commerce platform designed to enhance customer communication and support.",
+    link: "https://cypher-ecomerce.netlify.app", // Make sure it's HTTPS
+    description:
+      "An e-commerce platform designed to enhance customer communication and support, offering multiple ways to reach out for inquiries, orders, or assistance.",
+    image: CypherEcommerceImg, // Local screenshot file
     stack: [
       { name: "React", icon: <FaReact className="tech-icon" /> },
       { name: "Framer Motion", icon: <FaBolt className="tech-icon" /> },
       { name: "SCSS", icon: <FaSass className="tech-icon" /> },
       { name: "React Context API", icon: <FaShoppingCart className="tech-icon" /> },
+      { name: "Firebase Authentication", icon: <FaFire className="tech-icon" /> },
     ],
   },
   {
     id: 3,
     title: "Tic-Tac-Toe",
     link: "https://tic-tac-toe-cypher.netlify.app/",
-    embedUrl: "https://tic-tac-toe-cypher.netlify.app/",
-    description: "A fun, strategic Tic-Tac-Toe game featuring AI-based learning.",
+    description:
+      "A fun, strategic Tic-Tac-Toe game featuring AI-based learning, suitable for players of all ages.",
+    image: TicTacToeImg, // Local screenshot file
     stack: [
       { name: "React", icon: <FaReact className="tech-icon" /> },
       { name: "SCSS", icon: <FaSass className="tech-icon" /> },
@@ -52,22 +61,21 @@ const Portfolio = () => {
       <div className="portfolio-content">
         {projects.map((project) => (
           <div key={project.id} className="portfolio-item">
-            <div className="iframe-container">
-              <iframe
-                src={project.embedUrl}
-                title={project.title}
-                className="project-iframe"
-                loading="lazy"
-                sandbox="allow-scripts allow-same-origin"
-                scrolling="no"
+            {/* Screenshot Card */}
+            <div className="screenshot-container">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="screenshot"
               />
-              <div className="iframe-overlay"></div>
             </div>
 
+            {/* Project Info */}
             <div className="info">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
 
+              {/* Tech Stack */}
               <div className="tech-stack">
                 {project.stack.map((tech, index) => (
                   <span key={index} className="tech">
@@ -76,13 +84,14 @@ const Portfolio = () => {
                 ))}
               </div>
 
+              {/* View Demo Button */}
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="demo-button"
               >
-                Open Full Project
+                View Demo
               </a>
             </div>
           </div>
