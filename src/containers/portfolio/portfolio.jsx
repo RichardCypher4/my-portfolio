@@ -1,12 +1,10 @@
 import React from "react";
 import PageHeader from "../../component/pageHeader/pageHeader";
 import { BsInfoCircle } from "react-icons/bs";
-import { FaReact, FaSass, FaFire, FaBolt, FaShoppingCart } from "react-icons/fa";
-import "./portfolio.scss";
-
-// Replace these image paths with your actual screenshot file paths
+import { FaReact, FaSass, FaFire, FaBolt } from "react-icons/fa";
+import "./portfolio.scss"
 import FoodRestaurantImg from "../../asset/niii/image1.jpg";
-import CypherEcommerceImg from "../../asset/niii/image3.jpg";
+import Clone from "../../asset/niii/clone.jpg";
 import TicTacToeImg from "../../asset/niii/image2.jpg";
 
 const projects = [
@@ -26,17 +24,21 @@ const projects = [
   },
   {
     id: 2,
-    title: "Cypher E-commerce",
-    link: "https://cypher-ecomerce.netlify.app", // Make sure it's HTTPS
+    title: "clone-dispatch",
+    link: "https://clone-dispatch.netlify.app/", 
     description:
-      "An e-commerce platform designed to enhance customer communication and support, offering multiple ways to reach out for inquiries, orders, or assistance.",
-    image: CypherEcommerceImg, // Local screenshot file
+      "A React application designed to streamline the dispatch process for clone operations. It provides an interface for managing clone dispatch requests, tracking status updates, and facilitating communication between clone operators and dispatch teams.",
+    image: Clone, 
     stack: [
       { name: "React", icon: <FaReact className="tech-icon" /> },
       { name: "Framer Motion", icon: <FaBolt className="tech-icon" /> },
       { name: "SCSS", icon: <FaSass className="tech-icon" /> },
+      { name: "React-Router", icon: <FaReact className="tec-icon" />},
+      { name: "React-Hooks", icon: <FaReact className="tec-icon" />},
+    /*
       { name: "React Context API", icon: <FaShoppingCart className="tech-icon" /> },
       { name: "Firebase Authentication", icon: <FaFire className="tech-icon" /> },
+       */
     ],
   },
   {
