@@ -12,8 +12,8 @@ const projects = [
 
   {
     id: 1,
-    title: "Tic-Tac-Toe",
-    link: "https://appartment-cypher.netlify.app/",
+    title: "Appartment",
+    link: "https://appartment-c.netlify.app/",
     description:
       "Built with React and Framer Motion, the sidebar tracks active routes and user authentication states. Protected routes restrict unauthorized access, and error boundaries handle loading failures gracefully. Real-time notifications appear as badges, and a floating ",
       image: App,
