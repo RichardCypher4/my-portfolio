@@ -6,8 +6,26 @@ import "./portfolio.scss"
 import FoodRestaurantImg from "../../asset/niii/image1.jpg";
 import Clone from "../../asset/niii/clone.jpg";
 import TicTacToeImg from "../../asset/niii/image2.jpg";
+import App from '../../asset/niii/appartment.jpg'
 
 const projects = [
+
+  {
+    id: 1,
+    title: "Tic-Tac-Toe",
+    link: "https://appartment-cypher.netlify.app/",
+    description:
+      "Built with React and Framer Motion, the sidebar tracks active routes and user authentication states. Protected routes restrict unauthorized access, and error boundaries handle loading failures gracefully. Real-time notifications appear as badges, and a floating ",
+      image: App,
+      stack: [
+      { name: "React", icon: <FaReact className="tech-icon" /> },
+      { name: "SCSS", icon: <FaSass className="tech-icon" /> },
+      { name: "Framer Motion", icon: <FaBolt className="tech-icon" /> },
+      { name: "Firebase Authentication", icon: <FaFire className="tech-icon" /> },
+    ],
+  },
+
+
   {
     id: 1,
     title: "FoodRestaurant",
@@ -53,6 +71,7 @@ const projects = [
       { name: "SCSS", icon: <FaSass className="tech-icon" /> },
     ],
   },
+  
 ];
 
 const Portfolio = () => {
